@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Platform } from 'react-native';
+import { View, Platform } from 'react-native';
 import { NavigationHeader } from '../Common/NavigationHeader';
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import {
-  MKSpinner,
-} from 'react-native-material-kit';
 import { WebView } from "react-native-webview";
 import styles from './styles';
 

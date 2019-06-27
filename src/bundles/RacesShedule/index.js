@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, SafeAreaView, ScrollView } from 'react-native';
 import { NavigationHeader } from '../Common/NavigationHeader';
 import { Table, TableWrapper, Row, Cell } from 'react-native-table-component';
-import {
-  MKSpinner,
-} from 'react-native-material-kit';
+import { MKSpinner } from 'react-native-material-kit';
 import connect from './connect';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 
 
@@ -68,5 +65,17 @@ class RacesShedule extends Component {
     )
   }
 }
+
+RacesShedule.propTypes = {
+  races: PropTypes.arrayOf(PropTypes.object),
+  loadingData: PropTypes.bool.isRequired,
+  getShedule: PropTypes.func().isRequired,
+  changeLodaingDataStatus: PropTypes.func().isRequired,
+};
+
+RacesShedule.defaultProps = {
+  races: [],
+  loadingData: true,
+};
 
 export default connect(RacesShedule);
