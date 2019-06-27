@@ -1,8 +1,8 @@
 import axios from 'axios';
 const GET_DRIVERS = 'GET_DRIVERS';
 const CHANGE_LOADING_DATA_STATUS = 'CHANGE_LOADING_DATA_STATUS';
-const GET_MORE_INFO_ABOUT_DRIVER = 'GET_MORE_INFO_ABOUT_DRIVER';
 
+// change loading status for displaying or not displaying loading spinner
 export const changeLodaingDataStatus = () => {
   return (dispatch) => {
     dispatch({
@@ -11,6 +11,9 @@ export const changeLodaingDataStatus = () => {
   }
 }
 
+/**
+ * @param {offset for pagination} offset 
+ */
 export const getDrivers = (offset = 0) => {
   return async (dispatch) => {
     try {

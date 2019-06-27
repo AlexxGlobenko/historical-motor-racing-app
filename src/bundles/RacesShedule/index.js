@@ -16,7 +16,14 @@ class RacesShedule extends Component {
       pageNumber: 0,
     }
   }
-
+  
+  componentDidMount() {
+    const { getShedule, changeLodaingDataStatus } = this.props;
+    changeLodaingDataStatus();
+    getShedule();
+  }
+  
+  // navigation header options
   static navigationOptions = ({ navigation }) => {
     return {
       header: (
@@ -29,11 +36,6 @@ class RacesShedule extends Component {
     };
   }
 
-  componentDidMount() {
-    const { getShedule, changeLodaingDataStatus } = this.props;
-    changeLodaingDataStatus();
-    getShedule();
-  }
 
   render() {
     const state = this.state;

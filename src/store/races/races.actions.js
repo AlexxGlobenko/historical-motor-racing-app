@@ -3,6 +3,7 @@ import axios from "axios";
 const GET_SHEDULE = 'GET_SHEDULE';
 const CHANGE_LOADING_SHEDULES_DATA_STATUS = 'CHANGE_LOADING_SHEDULES_DATA_STATUS';
 
+// change loading status for displaying or not displaying loading spinner
 export const changeLodaingDataStatus = () => {
   return (dispatch) => {
     dispatch({
@@ -11,6 +12,7 @@ export const changeLodaingDataStatus = () => {
   }
 }
 
+// get reaces shedule from api
 export const getShedule = () => {
   return async (dispatch) => {
     try {

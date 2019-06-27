@@ -10,6 +10,7 @@ import connect from './connect';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 
+
 class AllRacers extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class AllRacers extends Component {
     }
   }
 
+  // navigation header options
   static navigationOptions = ({ navigation }) => {
     return {
       header: (
@@ -34,6 +36,7 @@ class AllRacers extends Component {
     getDrivers();
   }
 
+  // button for navigating to screen with more info about driver
   moreInfoAboutDriverButton = (driverName, index) => {
     return (
       <TouchableOpacity
@@ -46,6 +49,7 @@ class AllRacers extends Component {
     )
   }
 
+  // navigation function for navigating to screen with more info about driver
   goToUserMoreInfo = (index) => {
     const { navigation, driversUrl } = this.props;
     navigation.navigate({
@@ -56,6 +60,7 @@ class AllRacers extends Component {
     });
   }
 
+  // navigation function for navigating to screen with races shedule
   navToRacesShedule = () => {
     const { navigation } = this.props;
     navigation.navigate({
@@ -63,6 +68,7 @@ class AllRacers extends Component {
     });
   }
 
+  // next page button press handler
   onNextPagePress = () => {
     const { lastPage, getDrivers, changeLodaingDataStatus } = this.props;
     if (!lastPage) {
@@ -75,6 +81,7 @@ class AllRacers extends Component {
     }
   }
 
+  // previous page button press handler
   onPreviousPagePress = () => {
     const { pageNumber } = this.state;
     const { getDrivers, changeLodaingDataStatus } = this.props;
