@@ -13,6 +13,7 @@ export default class MoreInfoAboutUser extends Component {
     }
   }
 
+  // navigation header options
   static navigationOptions = ({ navigation }) => {
     return {
       header: (
@@ -23,12 +24,6 @@ export default class MoreInfoAboutUser extends Component {
         />
       ),
     };
-  }
-
-  showWebView = () => {
-    this.setState({
-      isLoading: false,
-    })
   }
 
   render() {
